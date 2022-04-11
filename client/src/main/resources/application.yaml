@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+# 配置oauth2授权服务器地址
+security:
+  oauth2:
+    client:
+      client-id: client1
+      client-secret: secret1
+      user-authorization-uri: http://localhost:8080/oauth/authorize
+      access-token-uri: http://localhost:8080/oauth/token
+      registered-redirect-uri:
+        - http://localhost:8091
+    resource:
+      user-info-uri: http://localhost:8080/test
